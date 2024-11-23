@@ -20,7 +20,6 @@ axios
   .then(function (response) {
     ticketList = response.data.data;
     displayTickets(ticketList);
-    regionStatistics();
   })
   .catch(function (error) {
     console.error("Error fetching data:", error);
@@ -165,6 +164,8 @@ function displayTickets(tickets) {
   });
 
   ticketCard.innerHTML = str;
+
+  regionStatistics();
 }
 
 // 地區選擇
